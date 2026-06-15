@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+  /* number spans use Cormorant Garamond */
+  .num { font-family: "Cormorant Garamond", Georgia, serif; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-ink text-cream px-5 py-2.5 rounded-[3px] text-[13px] font-medium
+           font-sans tracking-[.02em] transition-colors hover:bg-ink-2
+           flex items-center gap-2 whitespace-nowrap;
+  }
+  .btn-ghost {
+    @apply bg-white text-ink border border-border px-5 py-2.5 rounded-[3px]
+           text-[13px] font-sans transition-colors hover:bg-cream-2;
+  }
+  .btn-danger {
+    @apply bg-fred-bg text-fred border border-fred-bd px-5 py-2.5 rounded-[3px]
+           text-[13px] font-sans transition-colors hover:opacity-90;
+  }
+  .card {
+    @apply bg-white border border-border rounded-[4px];
+  }
+  .input {
+    @apply w-full px-3 py-2.5 border border-border rounded-[3px] text-[13px]
+           font-sans text-ink bg-white outline-none transition-colors
+           focus:border-ink-2 placeholder:text-ink-4;
+  }
+  .label {
+    @apply block text-[10px] text-ink-3 font-medium tracking-[.06em] uppercase mb-1.5;
+  }
+  .panel-title {
+    @apply font-serif text-[15px] font-semibold text-ink;
+  }
+  .page-title {
+    @apply font-serif text-[22px] font-semibold text-ink;
+  }
+}
